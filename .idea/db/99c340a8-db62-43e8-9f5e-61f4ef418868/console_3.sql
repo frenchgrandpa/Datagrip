@@ -1,0 +1,1 @@
+select * from item_transactions where is_tradeit_deposit = false

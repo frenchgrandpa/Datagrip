@@ -1,0 +1,1 @@
+select * from sell_listings where item_id in (select id from items where item_spec_id = 94)

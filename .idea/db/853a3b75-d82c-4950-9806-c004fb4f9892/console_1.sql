@@ -1,0 +1,1 @@
+SELECT * from trades where jsonb_array_length(user_items) > 0

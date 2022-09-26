@@ -1,0 +1,1 @@
+SELECT * FROM trades.public.trades
