@@ -1,1 +1,0 @@
-select distinct tag from liquidity_logs where timestamp > now () - interval '15 min'

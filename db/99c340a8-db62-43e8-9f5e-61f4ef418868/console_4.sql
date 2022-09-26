@@ -1,1 +1,0 @@
-select * from crypto_payments where owner_id = 182
