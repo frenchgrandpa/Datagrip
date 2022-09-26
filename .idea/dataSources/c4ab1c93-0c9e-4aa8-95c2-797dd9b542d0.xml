@@ -1,0 +1,3064 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Crypto Trading">
+  <database-model serializer="dbm" dbms="MYSQL_AURORA" family-id="MYSQL_AURORA" format-version="4.43">
+    <root id="1">
+      <Dbms>MYSQL_AURORA</Dbms>
+      <DefaultCasing>exact</DefaultCasing>
+      <DefaultEngine>InnoDB</DefaultEngine>
+      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
+      <Grants>|root||admin||ALTER|G
+|root||rdsadmin|localhost|ALTER|G
+|root||admin||ALTER ROUTINE|G
+|root||rdsadmin|localhost|ALTER ROUTINE|G
+|root||admin||CREATE|G
+|root||rdsadmin|localhost|CREATE|G
+|root||admin||CREATE ROUTINE|G
+|root||rdsadmin|localhost|CREATE ROUTINE|G
+|root||rdsadmin|localhost|CREATE TABLESPACE|G
+|root||admin||CREATE TEMPORARY TABLES|G
+|root||rdsadmin|localhost|CREATE TEMPORARY TABLES|G
+|root||admin||CREATE USER|G
+|root||rdsadmin|localhost|CREATE USER|G
+|root||admin||CREATE VIEW|G
+|root||rdsadmin|localhost|CREATE VIEW|G
+|root||admin||DELETE|G
+|root||rdsadmin|localhost|DELETE|G
+|root||admin||DROP|G
+|root||rdsadmin|localhost|DROP|G
+|root||admin||EVENT|G
+|root||rdsadmin|localhost|EVENT|G
+|root||admin||EXECUTE|G
+|root||rdsadmin|localhost|EXECUTE|G
+|root||rdsadmin|localhost|FILE|G
+|root||admin||INDEX|G
+|root||rdsadmin|localhost|INDEX|G
+|root||admin||INSERT|G
+|root||rdsadmin|localhost|INSERT|G
+|root||admin||LOCK TABLES|G
+|root||rdsadmin|localhost|LOCK TABLES|G
+|root||admin||PROCESS|G
+|root||guifel||PROCESS|G
+|root||guifel|localhost|PROCESS|G
+|root||rdsadmin|localhost|PROCESS|G
+|root||admin||REFERENCES|G
+|root||rdsadmin|localhost|REFERENCES|G
+|root||admin||RELOAD|G
+|root||rdsadmin|localhost|RELOAD|G
+|root||admin||REPLICATION CLIENT|G
+|root||guifel||REPLICATION CLIENT|G
+|root||guifel|localhost|REPLICATION CLIENT|G
+|root||rdsadmin|localhost|REPLICATION CLIENT|G
+|root||admin||REPLICATION SLAVE|G
+|root||rdsadmin|localhost|REPLICATION SLAVE|G
+|root||admin||SELECT|G
+|root||guifel||SELECT|G
+|root||guifel|localhost|SELECT|G
+|root||rdsadmin|localhost|SELECT|G
+|root||admin||SHOW DATABASES|G
+|root||rdsadmin|localhost|SHOW DATABASES|G
+|root||admin||SHOW VIEW|G
+|root||guifel||SHOW VIEW|G
+|root||guifel|localhost|SHOW VIEW|G
+|root||rdsadmin|localhost|SHOW VIEW|G
+|root||rdsadmin|localhost|SHUTDOWN|G
+|root||rdsadmin|localhost|SUPER|G
+|root||admin||TRIGGER|G
+|root||rdsadmin|localhost|TRIGGER|G
+|root||admin||UPDATE|G
+|root||rdsadmin|localhost|UPDATE|G
+|root||admin||grant option|G
+|root||rdsadmin|localhost|grant option|G</Grants>
+      <ServerVersion>2.10.0</ServerVersion>
+    </root>
+    <collation id="2" parent="1" name="big5_chinese_ci">
+      <Charset>big5</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="3" parent="1" name="big5_bin">
+      <Charset>big5</Charset>
+    </collation>
+    <collation id="4" parent="1" name="dec8_swedish_ci">
+      <Charset>dec8</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="5" parent="1" name="dec8_bin">
+      <Charset>dec8</Charset>
+    </collation>
+    <collation id="6" parent="1" name="cp850_general_ci">
+      <Charset>cp850</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="7" parent="1" name="cp850_bin">
+      <Charset>cp850</Charset>
+    </collation>
+    <collation id="8" parent="1" name="hp8_english_ci">
+      <Charset>hp8</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="9" parent="1" name="hp8_bin">
+      <Charset>hp8</Charset>
+    </collation>
+    <collation id="10" parent="1" name="koi8r_general_ci">
+      <Charset>koi8r</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="11" parent="1" name="koi8r_bin">
+      <Charset>koi8r</Charset>
+    </collation>
+    <collation id="12" parent="1" name="latin1_german1_ci">
+      <Charset>latin1</Charset>
+    </collation>
+    <collation id="13" parent="1" name="latin1_swedish_ci">
+      <Charset>latin1</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="14" parent="1" name="latin1_danish_ci">
+      <Charset>latin1</Charset>
+    </collation>
+    <collation id="15" parent="1" name="latin1_german2_ci">
+      <Charset>latin1</Charset>
+    </collation>
+    <collation id="16" parent="1" name="latin1_bin">
+      <Charset>latin1</Charset>
+    </collation>
+    <collation id="17" parent="1" name="latin1_general_ci">
+      <Charset>latin1</Charset>
+    </collation>
+    <collation id="18" parent="1" name="latin1_general_cs">
+      <Charset>latin1</Charset>
+    </collation>
+    <collation id="19" parent="1" name="latin1_spanish_ci">
+      <Charset>latin1</Charset>
+    </collation>
+    <collation id="20" parent="1" name="latin2_czech_cs">
+      <Charset>latin2</Charset>
+    </collation>
+    <collation id="21" parent="1" name="latin2_general_ci">
+      <Charset>latin2</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="22" parent="1" name="latin2_hungarian_ci">
+      <Charset>latin2</Charset>
+    </collation>
+    <collation id="23" parent="1" name="latin2_croatian_ci">
+      <Charset>latin2</Charset>
+    </collation>
+    <collation id="24" parent="1" name="latin2_bin">
+      <Charset>latin2</Charset>
+    </collation>
+    <collation id="25" parent="1" name="swe7_swedish_ci">
+      <Charset>swe7</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="26" parent="1" name="swe7_bin">
+      <Charset>swe7</Charset>
+    </collation>
+    <collation id="27" parent="1" name="ascii_general_ci">
+      <Charset>ascii</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="28" parent="1" name="ascii_bin">
+      <Charset>ascii</Charset>
+    </collation>
+    <collation id="29" parent="1" name="ujis_japanese_ci">
+      <Charset>ujis</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="30" parent="1" name="ujis_bin">
+      <Charset>ujis</Charset>
+    </collation>
+    <collation id="31" parent="1" name="sjis_japanese_ci">
+      <Charset>sjis</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="32" parent="1" name="sjis_bin">
+      <Charset>sjis</Charset>
+    </collation>
+    <collation id="33" parent="1" name="hebrew_general_ci">
+      <Charset>hebrew</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="34" parent="1" name="hebrew_bin">
+      <Charset>hebrew</Charset>
+    </collation>
+    <collation id="35" parent="1" name="tis620_thai_ci">
+      <Charset>tis620</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="36" parent="1" name="tis620_bin">
+      <Charset>tis620</Charset>
+    </collation>
+    <collation id="37" parent="1" name="euckr_korean_ci">
+      <Charset>euckr</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="38" parent="1" name="euckr_bin">
+      <Charset>euckr</Charset>
+    </collation>
+    <collation id="39" parent="1" name="koi8u_general_ci">
+      <Charset>koi8u</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="40" parent="1" name="koi8u_bin">
+      <Charset>koi8u</Charset>
+    </collation>
+    <collation id="41" parent="1" name="gb2312_chinese_ci">
+      <Charset>gb2312</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="42" parent="1" name="gb2312_bin">
+      <Charset>gb2312</Charset>
+    </collation>
+    <collation id="43" parent="1" name="greek_general_ci">
+      <Charset>greek</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="44" parent="1" name="greek_bin">
+      <Charset>greek</Charset>
+    </collation>
+    <collation id="45" parent="1" name="cp1250_general_ci">
+      <Charset>cp1250</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="46" parent="1" name="cp1250_czech_cs">
+      <Charset>cp1250</Charset>
+    </collation>
+    <collation id="47" parent="1" name="cp1250_croatian_ci">
+      <Charset>cp1250</Charset>
+    </collation>
+    <collation id="48" parent="1" name="cp1250_bin">
+      <Charset>cp1250</Charset>
+    </collation>
+    <collation id="49" parent="1" name="cp1250_polish_ci">
+      <Charset>cp1250</Charset>
+    </collation>
+    <collation id="50" parent="1" name="gbk_chinese_ci">
+      <Charset>gbk</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="51" parent="1" name="gbk_bin">
+      <Charset>gbk</Charset>
+    </collation>
+    <collation id="52" parent="1" name="latin5_turkish_ci">
+      <Charset>latin5</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="53" parent="1" name="latin5_bin">
+      <Charset>latin5</Charset>
+    </collation>
+    <collation id="54" parent="1" name="armscii8_general_ci">
+      <Charset>armscii8</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="55" parent="1" name="armscii8_bin">
+      <Charset>armscii8</Charset>
+    </collation>
+    <collation id="56" parent="1" name="utf8_general_ci">
+      <Charset>utf8</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="57" parent="1" name="utf8_tolower_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="58" parent="1" name="utf8_bin">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="59" parent="1" name="utf8_unicode_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="60" parent="1" name="utf8_icelandic_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="61" parent="1" name="utf8_latvian_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="62" parent="1" name="utf8_romanian_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="63" parent="1" name="utf8_slovenian_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="64" parent="1" name="utf8_polish_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="65" parent="1" name="utf8_estonian_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="66" parent="1" name="utf8_spanish_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="67" parent="1" name="utf8_swedish_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="68" parent="1" name="utf8_turkish_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="69" parent="1" name="utf8_czech_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="70" parent="1" name="utf8_danish_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="71" parent="1" name="utf8_lithuanian_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="72" parent="1" name="utf8_slovak_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="73" parent="1" name="utf8_spanish2_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="74" parent="1" name="utf8_roman_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="75" parent="1" name="utf8_persian_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="76" parent="1" name="utf8_esperanto_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="77" parent="1" name="utf8_hungarian_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="78" parent="1" name="utf8_sinhala_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="79" parent="1" name="utf8_german2_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="80" parent="1" name="utf8_croatian_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="81" parent="1" name="utf8_unicode_520_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="82" parent="1" name="utf8_vietnamese_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="83" parent="1" name="utf8_general_mysql500_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="84" parent="1" name="ucs2_general_ci">
+      <Charset>ucs2</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="85" parent="1" name="ucs2_bin">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="86" parent="1" name="ucs2_unicode_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="87" parent="1" name="ucs2_icelandic_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="88" parent="1" name="ucs2_latvian_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="89" parent="1" name="ucs2_romanian_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="90" parent="1" name="ucs2_slovenian_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="91" parent="1" name="ucs2_polish_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="92" parent="1" name="ucs2_estonian_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="93" parent="1" name="ucs2_spanish_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="94" parent="1" name="ucs2_swedish_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="95" parent="1" name="ucs2_turkish_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="96" parent="1" name="ucs2_czech_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="97" parent="1" name="ucs2_danish_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="98" parent="1" name="ucs2_lithuanian_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="99" parent="1" name="ucs2_slovak_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="100" parent="1" name="ucs2_spanish2_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="101" parent="1" name="ucs2_roman_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="102" parent="1" name="ucs2_persian_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="103" parent="1" name="ucs2_esperanto_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="104" parent="1" name="ucs2_hungarian_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="105" parent="1" name="ucs2_sinhala_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="106" parent="1" name="ucs2_german2_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="107" parent="1" name="ucs2_croatian_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="108" parent="1" name="ucs2_unicode_520_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="109" parent="1" name="ucs2_vietnamese_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="110" parent="1" name="ucs2_general_mysql500_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="111" parent="1" name="cp866_general_ci">
+      <Charset>cp866</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="112" parent="1" name="cp866_bin">
+      <Charset>cp866</Charset>
+    </collation>
+    <collation id="113" parent="1" name="keybcs2_general_ci">
+      <Charset>keybcs2</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="114" parent="1" name="keybcs2_bin">
+      <Charset>keybcs2</Charset>
+    </collation>
+    <collation id="115" parent="1" name="macce_general_ci">
+      <Charset>macce</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="116" parent="1" name="macce_bin">
+      <Charset>macce</Charset>
+    </collation>
+    <collation id="117" parent="1" name="macroman_general_ci">
+      <Charset>macroman</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="118" parent="1" name="macroman_bin">
+      <Charset>macroman</Charset>
+    </collation>
+    <collation id="119" parent="1" name="cp852_general_ci">
+      <Charset>cp852</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="120" parent="1" name="cp852_bin">
+      <Charset>cp852</Charset>
+    </collation>
+    <collation id="121" parent="1" name="latin7_estonian_cs">
+      <Charset>latin7</Charset>
+    </collation>
+    <collation id="122" parent="1" name="latin7_general_ci">
+      <Charset>latin7</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="123" parent="1" name="latin7_general_cs">
+      <Charset>latin7</Charset>
+    </collation>
+    <collation id="124" parent="1" name="latin7_bin">
+      <Charset>latin7</Charset>
+    </collation>
+    <collation id="125" parent="1" name="utf8mb4_general_ci">
+      <Charset>utf8mb4</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="126" parent="1" name="utf8mb4_bin">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="127" parent="1" name="utf8mb4_unicode_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="128" parent="1" name="utf8mb4_icelandic_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="129" parent="1" name="utf8mb4_latvian_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="130" parent="1" name="utf8mb4_romanian_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="131" parent="1" name="utf8mb4_slovenian_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="132" parent="1" name="utf8mb4_polish_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="133" parent="1" name="utf8mb4_estonian_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="134" parent="1" name="utf8mb4_spanish_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="135" parent="1" name="utf8mb4_swedish_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="136" parent="1" name="utf8mb4_turkish_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="137" parent="1" name="utf8mb4_czech_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="138" parent="1" name="utf8mb4_danish_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="139" parent="1" name="utf8mb4_lithuanian_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="140" parent="1" name="utf8mb4_slovak_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="141" parent="1" name="utf8mb4_spanish2_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="142" parent="1" name="utf8mb4_roman_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="143" parent="1" name="utf8mb4_persian_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="144" parent="1" name="utf8mb4_esperanto_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="145" parent="1" name="utf8mb4_hungarian_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="146" parent="1" name="utf8mb4_sinhala_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="147" parent="1" name="utf8mb4_german2_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="148" parent="1" name="utf8mb4_croatian_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="149" parent="1" name="utf8mb4_unicode_520_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="150" parent="1" name="utf8mb4_vietnamese_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="151" parent="1" name="utf8mb4_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="152" parent="1" name="utf8mb4_de_pb_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="153" parent="1" name="utf8mb4_is_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="154" parent="1" name="utf8mb4_lv_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="155" parent="1" name="utf8mb4_ro_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="156" parent="1" name="utf8mb4_sl_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="157" parent="1" name="utf8mb4_pl_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="158" parent="1" name="utf8mb4_et_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="159" parent="1" name="utf8mb4_es_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="160" parent="1" name="utf8mb4_sv_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="161" parent="1" name="utf8mb4_tr_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="162" parent="1" name="utf8mb4_cs_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="163" parent="1" name="utf8mb4_da_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="164" parent="1" name="utf8mb4_lt_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="165" parent="1" name="utf8mb4_sk_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="166" parent="1" name="utf8mb4_es_trad_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="167" parent="1" name="utf8mb4_la_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="168" parent="1" name="utf8mb4_eo_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="169" parent="1" name="utf8mb4_hu_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="170" parent="1" name="utf8mb4_hr_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="171" parent="1" name="utf8mb4_vi_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="172" parent="1" name="utf8mb4_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="173" parent="1" name="utf8mb4_de_pb_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="174" parent="1" name="utf8mb4_is_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="175" parent="1" name="utf8mb4_lv_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="176" parent="1" name="utf8mb4_ro_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="177" parent="1" name="utf8mb4_sl_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="178" parent="1" name="utf8mb4_pl_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="179" parent="1" name="utf8mb4_et_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="180" parent="1" name="utf8mb4_es_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="181" parent="1" name="utf8mb4_sv_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="182" parent="1" name="utf8mb4_tr_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="183" parent="1" name="utf8mb4_cs_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="184" parent="1" name="utf8mb4_da_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="185" parent="1" name="utf8mb4_lt_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="186" parent="1" name="utf8mb4_sk_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="187" parent="1" name="utf8mb4_es_trad_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="188" parent="1" name="utf8mb4_la_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="189" parent="1" name="utf8mb4_eo_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="190" parent="1" name="utf8mb4_hu_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="191" parent="1" name="utf8mb4_hr_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="192" parent="1" name="utf8mb4_vi_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="193" parent="1" name="utf8mb4_ja_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="194" parent="1" name="utf8mb4_ja_0900_as_cs_ks">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="195" parent="1" name="utf8mb4_0900_as_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="196" parent="1" name="cp1251_bulgarian_ci">
+      <Charset>cp1251</Charset>
+    </collation>
+    <collation id="197" parent="1" name="cp1251_ukrainian_ci">
+      <Charset>cp1251</Charset>
+    </collation>
+    <collation id="198" parent="1" name="cp1251_bin">
+      <Charset>cp1251</Charset>
+    </collation>
+    <collation id="199" parent="1" name="cp1251_general_ci">
+      <Charset>cp1251</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="200" parent="1" name="cp1251_general_cs">
+      <Charset>cp1251</Charset>
+    </collation>
+    <collation id="201" parent="1" name="utf16_general_ci">
+      <Charset>utf16</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="202" parent="1" name="utf16_bin">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="203" parent="1" name="utf16_unicode_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="204" parent="1" name="utf16_icelandic_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="205" parent="1" name="utf16_latvian_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="206" parent="1" name="utf16_romanian_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="207" parent="1" name="utf16_slovenian_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="208" parent="1" name="utf16_polish_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="209" parent="1" name="utf16_estonian_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="210" parent="1" name="utf16_spanish_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="211" parent="1" name="utf16_swedish_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="212" parent="1" name="utf16_turkish_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="213" parent="1" name="utf16_czech_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="214" parent="1" name="utf16_danish_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="215" parent="1" name="utf16_lithuanian_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="216" parent="1" name="utf16_slovak_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="217" parent="1" name="utf16_spanish2_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="218" parent="1" name="utf16_roman_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="219" parent="1" name="utf16_persian_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="220" parent="1" name="utf16_esperanto_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="221" parent="1" name="utf16_hungarian_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="222" parent="1" name="utf16_sinhala_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="223" parent="1" name="utf16_german2_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="224" parent="1" name="utf16_croatian_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="225" parent="1" name="utf16_unicode_520_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="226" parent="1" name="utf16_vietnamese_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="227" parent="1" name="utf16le_general_ci">
+      <Charset>utf16le</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="228" parent="1" name="utf16le_bin">
+      <Charset>utf16le</Charset>
+    </collation>
+    <collation id="229" parent="1" name="cp1256_general_ci">
+      <Charset>cp1256</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="230" parent="1" name="cp1256_bin">
+      <Charset>cp1256</Charset>
+    </collation>
+    <collation id="231" parent="1" name="cp1257_lithuanian_ci">
+      <Charset>cp1257</Charset>
+    </collation>
+    <collation id="232" parent="1" name="cp1257_bin">
+      <Charset>cp1257</Charset>
+    </collation>
+    <collation id="233" parent="1" name="cp1257_general_ci">
+      <Charset>cp1257</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="234" parent="1" name="utf32_general_ci">
+      <Charset>utf32</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="235" parent="1" name="utf32_bin">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="236" parent="1" name="utf32_unicode_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="237" parent="1" name="utf32_icelandic_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="238" parent="1" name="utf32_latvian_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="239" parent="1" name="utf32_romanian_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="240" parent="1" name="utf32_slovenian_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="241" parent="1" name="utf32_polish_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="242" parent="1" name="utf32_estonian_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="243" parent="1" name="utf32_spanish_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="244" parent="1" name="utf32_swedish_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="245" parent="1" name="utf32_turkish_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="246" parent="1" name="utf32_czech_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="247" parent="1" name="utf32_danish_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="248" parent="1" name="utf32_lithuanian_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="249" parent="1" name="utf32_slovak_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="250" parent="1" name="utf32_spanish2_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="251" parent="1" name="utf32_roman_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="252" parent="1" name="utf32_persian_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="253" parent="1" name="utf32_esperanto_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="254" parent="1" name="utf32_hungarian_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="255" parent="1" name="utf32_sinhala_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="256" parent="1" name="utf32_german2_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="257" parent="1" name="utf32_croatian_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="258" parent="1" name="utf32_unicode_520_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="259" parent="1" name="utf32_vietnamese_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="260" parent="1" name="binary">
+      <Charset>binary</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="261" parent="1" name="geostd8_general_ci">
+      <Charset>geostd8</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="262" parent="1" name="geostd8_bin">
+      <Charset>geostd8</Charset>
+    </collation>
+    <collation id="263" parent="1" name="cp932_japanese_ci">
+      <Charset>cp932</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="264" parent="1" name="cp932_bin">
+      <Charset>cp932</Charset>
+    </collation>
+    <collation id="265" parent="1" name="eucjpms_japanese_ci">
+      <Charset>eucjpms</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="266" parent="1" name="eucjpms_bin">
+      <Charset>eucjpms</Charset>
+    </collation>
+    <collation id="267" parent="1" name="gb18030_chinese_ci">
+      <Charset>gb18030</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="268" parent="1" name="gb18030_bin">
+      <Charset>gb18030</Charset>
+    </collation>
+    <collation id="269" parent="1" name="gb18030_unicode_520_ci">
+      <Charset>gb18030</Charset>
+    </collation>
+    <schema id="270" parent="1" name="logs">
+      <Current>1</Current>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </schema>
+    <schema id="271" parent="1" name="information_schema">
+      <CollationName>utf8_general_ci</CollationName>
+    </schema>
+    <schema id="272" parent="1" name="mysql">
+      <CollationName>latin1_swedish_ci</CollationName>
+    </schema>
+    <schema id="273" parent="1" name="performance_schema">
+      <CollationName>utf8_general_ci</CollationName>
+    </schema>
+    <schema id="274" parent="1" name="sys">
+      <CollationName>utf8_general_ci</CollationName>
+    </schema>
+    <schema id="275" parent="1" name="tmp">
+      <CollationName>latin1_swedish_ci</CollationName>
+    </schema>
+    <user id="276" parent="1" name="admin"/>
+    <user id="277" parent="1" name="guifel"/>
+    <user id="278" parent="1" name="guifel">
+      <Host>localhost</Host>
+    </user>
+    <user id="279" parent="1" name="mysql.sys">
+      <Host>localhost</Host>
+    </user>
+    <user id="280" parent="1" name="rdsadmin">
+      <Host>localhost</Host>
+    </user>
+    <table id="281" parent="270" name="Test">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="282" parent="270" name="all_arbs">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="283" parent="270" name="altWarehouse_txs">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="284" parent="270" name="altwarehouse_stats">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="285" parent="270" name="arb_attempts">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="286" parent="270" name="balances_log">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="287" parent="270" name="basic_poolpath_params">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="288" parent="270" name="binance_usd_futures_tickers">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="289" parent="270" name="block_times_bsc">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="290" parent="270" name="block_times_eth">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="291" parent="270" name="block_times_ftm">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="292" parent="270" name="bots">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="293" parent="270" name="deltas">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="294" parent="270" name="dynamic_params">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="295" parent="270" name="exchange_deposits">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="296" parent="270" name="exchange_withdrawals">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="297" parent="270" name="fills">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="298" parent="270" name="flashbots_attempts">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="299" parent="270" name="flashbots_param_history">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="300" parent="270" name="futperp_spread_log">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="301" parent="270" name="heartbeats">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="302" parent="270" name="hedging_completed_orders">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="303" parent="270" name="liquidators">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="304" parent="270" name="mm_stats">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="305" parent="270" name="netting">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="306" parent="270" name="our_arbs">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="307" parent="270" name="params_global">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="308" parent="270" name="pools">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="309" parent="270" name="price_history">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="310" parent="270" name="tickers">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="311" parent="270" name="tokens">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="312" parent="270" name="total_balance_log">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <column id="313" parent="281" name="test_col">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="314" parent="282" name="id">
+      <AutoIncrement>6173460</AutoIncrement>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="315" parent="282" name="hash">
+      <DataType>varchar(80)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="316" parent="282" name="timestamp">
+      <DataType>double|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="317" parent="282" name="block_number">
+      <DataType>int(11)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="318" parent="282" name="pool">
+      <DataType>int(11)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="319" parent="282" name="bot">
+      <DataType>int(11)|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="320" parent="282" name="bot_type">
+      <DataType>varchar(45)|0s</DataType>
+      <DefaultExpression>&apos;offchain&apos;</DefaultExpression>
+      <Position>7</Position>
+    </column>
+    <column id="321" parent="282" name="bot_name">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="322" parent="282" name="value_in">
+      <DataType>double|0s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="323" parent="282" name="value_out">
+      <DataType>double|0s</DataType>
+      <Position>10</Position>
+    </column>
+    <column id="324" parent="282" name="token_in">
+      <DataType>varchar(50)|0s</DataType>
+      <Position>11</Position>
+    </column>
+    <column id="325" parent="282" name="token_out">
+      <DataType>varchar(50)|0s</DataType>
+      <Position>12</Position>
+    </column>
+    <column id="326" parent="282" name="gas_used">
+      <DataType>double|0s</DataType>
+      <Position>13</Position>
+    </column>
+    <column id="327" parent="282" name="gas_price">
+      <DataType>double|0s</DataType>
+      <Position>14</Position>
+    </column>
+    <column id="328" parent="282" name="bribe">
+      <DataType>double|0s</DataType>
+      <Position>15</Position>
+    </column>
+    <column id="329" parent="282" name="type">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>16</Position>
+    </column>
+    <column id="330" parent="282" name="eth_price">
+      <DataType>double|0s</DataType>
+      <Position>17</Position>
+    </column>
+    <column id="331" parent="282" name="value">
+      <DataType>double|0s</DataType>
+      <Position>18</Position>
+    </column>
+    <column id="332" parent="282" name="mined_time">
+      <DataType>double|0s</DataType>
+      <Position>19</Position>
+    </column>
+    <column id="333" parent="282" name="chain">
+      <DataType>varchar(45)|0s</DataType>
+      <DefaultExpression>&apos;eth&apos;</DefaultExpression>
+      <Position>20</Position>
+    </column>
+    <column id="334" parent="282" name="attempted">
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>-1</DefaultExpression>
+      <Position>21</Position>
+    </column>
+    <column id="335" parent="282" name="launched">
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>-1</DefaultExpression>
+      <Position>22</Position>
+    </column>
+    <column id="336" parent="282" name="status">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>23</Position>
+    </column>
+    <column id="337" parent="282" name="stamp_detected">
+      <DataType>double|0s</DataType>
+      <Position>24</Position>
+    </column>
+    <column id="338" parent="282" name="spot_detected">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>25</Position>
+    </column>
+    <column id="339" parent="282" name="best_inter_spot">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>26</Position>
+    </column>
+    <column id="340" parent="282" name="mine_spot">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>27</Position>
+    </column>
+    <column id="341" parent="282" name="base_fee">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>28</Position>
+    </column>
+    <column id="342" parent="282" name="spot_mine_in">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>-1</DefaultExpression>
+      <Position>29</Position>
+    </column>
+    <column id="343" parent="282" name="spot_mine_out">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>-1</DefaultExpression>
+      <Position>30</Position>
+    </column>
+    <column id="344" parent="282" name="spot_mine_out_">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>-1</DefaultExpression>
+      <Position>31</Position>
+    </column>
+    <column id="345" parent="282" name="spot_mine_in_">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>-1</DefaultExpression>
+      <Position>32</Position>
+    </column>
+    <index id="346" parent="282" name="id_UNIQUE">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="347" parent="282" name="hash_UNIQUE">
+      <ColNames>hash</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="348" parent="282" name="blockheight">
+      <ColNames>block_number</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="349" parent="282" name="flashbots">
+      <ColNames>pool
+token_in
+token_out
+block_number</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="350" parent="282" name="fk_all_arbs_token_idx">
+      <ColNames>token_in
+token_out</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="351" parent="282" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+    </key>
+    <key id="352" parent="282" name="id_UNIQUE">
+      <UnderlyingIndexName>id_UNIQUE</UnderlyingIndexName>
+    </key>
+    <key id="353" parent="282" name="hash_UNIQUE">
+      <UnderlyingIndexName>hash_UNIQUE</UnderlyingIndexName>
+    </key>
+    <column id="354" parent="283" name="id">
+      <AutoIncrement>1983867</AutoIncrement>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="355" parent="283" name="timestamp">
+      <DataType>double|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="356" parent="283" name="bot">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="357" parent="283" name="type">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="358" parent="283" name="alt_position">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="359" parent="283" name="alt_credits">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="360" parent="283" name="main_position">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="361" parent="283" name="main_credits">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="362" parent="283" name="uuid">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>9</Position>
+    </column>
+    <key id="363" parent="283" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+    </key>
+    <column id="364" parent="284" name="id">
+      <AutoIncrement>348939</AutoIncrement>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="365" parent="284" name="timestamp">
+      <DataType>double|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="366" parent="284" name="run_id">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="367" parent="284" name="bot">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="368" parent="284" name="main_credit">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="369" parent="284" name="main_position">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="370" parent="284" name="main_volume">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="371" parent="284" name="alt_credit">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="372" parent="284" name="alt_position">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="373" parent="284" name="alt_volume">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>10</Position>
+    </column>
+    <key id="374" parent="284" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+    </key>
+    <column id="375" parent="285" name="id">
+      <AutoIncrement>49717113</AutoIncrement>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="376" parent="285" name="timestamp">
+      <DataType>double|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="377" parent="285" name="block_number">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="378" parent="285" name="pool">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="379" parent="285" name="token_in">
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="380" parent="285" name="token_out">
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="381" parent="285" name="attempted">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="382" parent="285" name="chain">
+      <DataType>varchar(45)|0s</DataType>
+      <DefaultExpression>&apos;eth&apos;</DefaultExpression>
+      <Position>8</Position>
+    </column>
+    <column id="383" parent="285" name="status">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>9</Position>
+    </column>
+    <index id="384" parent="285" name="pools">
+      <ColNames>pool
+token_in
+token_out
+block_number</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="385" parent="285" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+    </key>
+    <column id="386" parent="286" name="id">
+      <AutoIncrement>8893969</AutoIncrement>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="387" parent="286" name="timestamp">
+      <DataType>double|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="388" parent="286" name="total_balance">
+      <DataType>int(11)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="389" parent="286" name="balances">
+      <DataType>json|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="390" parent="286" name="chain">
+      <DataType>varchar(45)|0s</DataType>
+      <DefaultExpression>&apos;eth&apos;</DefaultExpression>
+      <Position>5</Position>
+    </column>
+    <key id="391" parent="286" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+    </key>
+    <column id="392" parent="287" name="id">
+      <AutoIncrement>45</AutoIncrement>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="393" parent="287" name="pool">
+      <DataType>int(11)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="394" parent="287" name="token_in">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="395" parent="287" name="token_out">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="396" parent="287" name="threshold">
+      <DataType>double|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="397" parent="287" name="attempt_rate_20">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>-1</DefaultExpression>
+      <Position>6</Position>
+    </column>
+    <column id="398" parent="287" name="attempt_rate_100">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>-1</DefaultExpression>
+      <Position>7</Position>
+    </column>
+    <column id="399" parent="287" name="chain">
+      <DataType>varchar(45)|0s</DataType>
+      <DefaultExpression>&apos;eth&apos;</DefaultExpression>
+      <Position>8</Position>
+    </column>
+    <column id="400" parent="287" name="history">
+      <DataType>json|0s</DataType>
+      <Position>9</Position>
+    </column>
+    <key id="401" parent="287" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+    </key>
+    <column id="402" parent="288" name="ticker">
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="403" parent="288" name="liquidity_rank">
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>3</DefaultExpression>
+      <Position>2</Position>
+    </column>
+    <column id="404" parent="288" name="enabled">
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>3</Position>
+    </column>
+    <column id="405" parent="288" name="accuracy">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="406" parent="288" name="quote_width">
+      <DataType>int(11)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="407" parent="288" name="hedge_style">
+      <DataType>varchar(45)|0s</DataType>
+      <DefaultExpression>&apos;taker&apos;</DefaultExpression>
+      <Position>6</Position>
+    </column>
+    <column id="408" parent="288" name="mm_enabled">
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>7</Position>
+    </column>
+    <column id="409" parent="288" name="mm_allow_hedger">
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>1</DefaultExpression>
+      <Position>8</Position>
+    </column>
+    <column id="410" parent="288" name="mm_quote_strength">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="411" parent="288" name="mm_max_balance">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>10</Position>
+    </column>
+    <column id="412" parent="288" name="symbol">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>11</Position>
+    </column>
+    <key id="413" parent="288" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>ticker</UnderlyingIndexColNames>
+    </key>
+    <column id="414" parent="289" name="block_number">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="415" parent="289" name="timestamp">
+      <DataType>double|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="416" parent="290" name="block_number">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="417" parent="290" name="timestamp">
+      <DataType>double|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <key id="418" parent="290" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>block_number</UnderlyingIndexColNames>
+    </key>
+    <column id="419" parent="291" name="block_number">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="420" parent="291" name="timestamp">
+      <DataType>double|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="421" parent="292" name="id">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="422" parent="292" name="address">
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="423" parent="292" name="name">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="424" parent="292" name="type">
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="425" parent="292" name="chain">
+      <DataType>varchar(45)|0s</DataType>
+      <DefaultExpression>&apos;eth&apos;</DefaultExpression>
+      <Position>5</Position>
+    </column>
+    <column id="426" parent="292" name="ignore">
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>6</Position>
+    </column>
+    <column id="427" parent="292" name="is_storage">
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>7</Position>
+    </column>
+    <key id="428" parent="292" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+    </key>
+    <column id="429" parent="293" name="type">
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="430" parent="293" name="delta">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <key id="431" parent="293" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>type</UnderlyingIndexColNames>
+    </key>
+    <column id="432" parent="294" name="id">
+      <AutoIncrement>2071</AutoIncrement>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="433" parent="294" name="pool">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="434" parent="294" name="token_in">
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="435" parent="294" name="token_out">
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="436" parent="294" name="chain">
+      <DataType>varchar(45)|0s</DataType>
+      <DefaultExpression>&apos;eth&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="437" parent="294" name="bid">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>0.3</DefaultExpression>
+      <Position>6</Position>
+    </column>
+    <column id="438" parent="294" name="fb_winrate_1">
+      <DataType>double|0s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="439" parent="294" name="fb_winrate_3">
+      <DataType>double|0s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="440" parent="294" name="fb_winrate_10">
+      <DataType>double|0s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="441" parent="294" name="fb_joinrate">
+      <DataType>double|0s</DataType>
+      <Position>10</Position>
+    </column>
+    <column id="442" parent="294" name="fb_joinrate_1">
+      <DataType>double|0s</DataType>
+      <Position>11</Position>
+    </column>
+    <column id="443" parent="294" name="fb_joinrate_3">
+      <DataType>double|0s</DataType>
+      <Position>12</Position>
+    </column>
+    <column id="444" parent="294" name="fb_joinrate_10">
+      <DataType>double|0s</DataType>
+      <Position>13</Position>
+    </column>
+    <column id="445" parent="294" name="pga_joinrate">
+      <DataType>double|0s</DataType>
+      <Position>14</Position>
+    </column>
+    <column id="446" parent="294" name="pga_joinrate_1">
+      <DataType>double|0s</DataType>
+      <Position>15</Position>
+    </column>
+    <column id="447" parent="294" name="pga_joinrate_3">
+      <DataType>double|0s</DataType>
+      <Position>16</Position>
+    </column>
+    <column id="448" parent="294" name="pga_joinrate_10">
+      <DataType>double|0s</DataType>
+      <Position>17</Position>
+    </column>
+    <column id="449" parent="294" name="threshold">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>30</DefaultExpression>
+      <Position>18</Position>
+    </column>
+    <column id="450" parent="294" name="attempt_rate_100">
+      <DataType>double|0s</DataType>
+      <Position>19</Position>
+    </column>
+    <column id="451" parent="294" name="tx_launch_rate">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>-1</DefaultExpression>
+      <Position>20</Position>
+    </column>
+    <column id="452" parent="294" name="win_rate">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>-1</DefaultExpression>
+      <Position>21</Position>
+    </column>
+    <column id="453" parent="294" name="target_attempt_rate">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>0.5</DefaultExpression>
+      <Position>22</Position>
+    </column>
+    <column id="454" parent="294" name="attempt_rate_20">
+      <DataType>double|0s</DataType>
+      <Position>23</Position>
+    </column>
+    <column id="455" parent="294" name="attempt_history">
+      <DataType>json|0s</DataType>
+      <Position>24</Position>
+    </column>
+    <column id="456" parent="294" name="slippage">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>10</DefaultExpression>
+      <Position>25</Position>
+    </column>
+    <column id="457" parent="294" name="size_adjust_good">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>1</DefaultExpression>
+      <Position>26</Position>
+    </column>
+    <column id="458" parent="294" name="size_adjust_bad">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>0.9</DefaultExpression>
+      <Position>27</Position>
+    </column>
+    <column id="459" parent="294" name="extra_threshold_bad">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>28</Position>
+    </column>
+    <column id="460" parent="294" name="min_token_in">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>29</Position>
+    </column>
+    <column id="461" parent="294" name="slippage_mod_bad">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>30</Position>
+    </column>
+    <column id="462" parent="294" name="slippage_mod_good">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>31</Position>
+    </column>
+    <column id="463" parent="294" name="good_size_slippage">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>32</Position>
+    </column>
+    <column id="464" parent="294" name="bad_size_slippage">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>3</DefaultExpression>
+      <Position>33</Position>
+    </column>
+    <column id="465" parent="294" name="lowball_threshold">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>5</DefaultExpression>
+      <Position>34</Position>
+    </column>
+    <column id="466" parent="294" name="lowball_bid">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>0.2</DefaultExpression>
+      <Position>35</Position>
+    </column>
+    <column id="467" parent="294" name="param_adjust_type">
+      <DataType>varchar(45)|0s</DataType>
+      <DefaultExpression>&apos;auto&apos;</DefaultExpression>
+      <Position>36</Position>
+    </column>
+    <column id="468" parent="294" name="last_allarbs_id">
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>37</Position>
+    </column>
+    <column id="469" parent="294" name="tag">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>38</Position>
+    </column>
+    <column id="470" parent="294" name="tmp_hold_col">
+      <DataType>double|0s</DataType>
+      <Position>39</Position>
+    </column>
+    <column id="471" parent="294" name="volatility_thresh_min">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>40</Position>
+    </column>
+    <column id="472" parent="294" name="volatility_thresh_mid">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>41</Position>
+    </column>
+    <column id="473" parent="294" name="volatility_thresh_max">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>42</Position>
+    </column>
+    <column id="474" parent="294" name="thresh_distr_min">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>20</DefaultExpression>
+      <Position>43</Position>
+    </column>
+    <column id="475" parent="294" name="thresh_distr_mid">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>40</DefaultExpression>
+      <Position>44</Position>
+    </column>
+    <column id="476" parent="294" name="thresh_distr_max">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>60</DefaultExpression>
+      <Position>45</Position>
+    </column>
+    <column id="477" parent="294" name="comp_thresh_min">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>46</Position>
+    </column>
+    <column id="478" parent="294" name="comp_thresh_mid">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>47</Position>
+    </column>
+    <column id="479" parent="294" name="comp_thresh_max">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>48</Position>
+    </column>
+    <column id="480" parent="294" name="upper_oneSecond_vol">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>49</Position>
+    </column>
+    <column id="481" parent="294" name="avg_blockVol">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>50</Position>
+    </column>
+    <key id="482" parent="294" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+    </key>
+    <column id="483" parent="295" name="id">
+      <AutoIncrement>7706</AutoIncrement>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="484" parent="295" name="exchange">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="485" parent="295" name="timestamp">
+      <DataType>double|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="486" parent="295" name="chain">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="487" parent="295" name="tx_id">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="488" parent="295" name="token">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="489" parent="295" name="amount">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="490" parent="295" name="received">
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>8</Position>
+    </column>
+    <column id="491" parent="295" name="received_time">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="492" parent="295" name="confirmed_time">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>10</Position>
+    </column>
+    <index id="493" parent="295" name="tx_id_UNIQUE">
+      <ColNames>tx_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="494" parent="295" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+    </key>
+    <key id="495" parent="295" name="tx_id_UNIQUE">
+      <UnderlyingIndexName>tx_id_UNIQUE</UnderlyingIndexName>
+    </key>
+    <column id="496" parent="296" name="id">
+      <AutoIncrement>491</AutoIncrement>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="497" parent="296" name="custom_id">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="498" parent="296" name="exchange">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="499" parent="296" name="chain">
+      <DataType>varchar(45)|0s</DataType>
+      <DefaultExpression>&apos;eth&apos;</DefaultExpression>
+      <Position>4</Position>
+    </column>
+    <column id="500" parent="296" name="tx_id">
+      <DataType>varchar(80)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="501" parent="296" name="init_time">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="502" parent="296" name="completed_time">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="503" parent="296" name="token">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="504" parent="296" name="amount">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="505" parent="296" name="received">
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>10</Position>
+    </column>
+    <key id="506" parent="296" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+    </key>
+    <column id="507" parent="297" name="id">
+      <AutoIncrement>13128439</AutoIncrement>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="508" parent="297" name="ticker">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="509" parent="297" name="timestamp">
+      <DataType>double|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="510" parent="297" name="exchange">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="511" parent="297" name="balance">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="512" parent="297" name="quantity">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="513" parent="297" name="price">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="514" parent="297" name="type">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="515" parent="297" name="program">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="516" parent="297" name="bots">
+      <DataType>json|0s</DataType>
+      <Position>10</Position>
+    </column>
+    <key id="517" parent="297" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+    </key>
+    <column id="518" parent="298" name="id">
+      <AutoIncrement>3641220</AutoIncrement>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="519" parent="298" name="pool">
+      <DataType>int(11)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="520" parent="298" name="token_in">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="521" parent="298" name="token_out">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="522" parent="298" name="bribe">
+      <DataType>double|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="523" parent="298" name="gas_used">
+      <DataType>double|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="524" parent="298" name="gas_price">
+      <DataType>double|0s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="525" parent="298" name="eth_price">
+      <DataType>double|0s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="526" parent="298" name="revenue">
+      <DataType>double|0s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="527" parent="298" name="block_number">
+      <DataType>int(11)|0s</DataType>
+      <Position>10</Position>
+    </column>
+    <column id="528" parent="298" name="timestamp">
+      <DataType>double|0s</DataType>
+      <Position>11</Position>
+    </column>
+    <column id="529" parent="298" name="size">
+      <DataType>double|0s</DataType>
+      <Position>12</Position>
+    </column>
+    <column id="530" parent="298" name="adjusted">
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>13</Position>
+    </column>
+    <column id="531" parent="298" name="chain">
+      <DataType>varchar(45)|0s</DataType>
+      <DefaultExpression>&apos;eth&apos;</DefaultExpression>
+      <Position>14</Position>
+    </column>
+    <column id="532" parent="298" name="tx_hash">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>15</Position>
+    </column>
+    <column id="533" parent="298" name="bundle_hash">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>16</Position>
+    </column>
+    <index id="534" parent="298" name="recent_perpool">
+      <ColNames>pool
+token_in
+token_out
+block_number
+timestamp</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="535" parent="298" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+    </key>
+    <column id="536" parent="299" name="id">
+      <AutoIncrement>5275</AutoIncrement>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="537" parent="299" name="pool">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="538" parent="299" name="token_in">
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="539" parent="299" name="token_out">
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="540" parent="299" name="timestamp">
+      <DataType>double|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="541" parent="299" name="bid_param_old">
+      <DataType>double|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="542" parent="299" name="bid_param_new">
+      <DataType>double|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="543" parent="299" name="won">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <column id="544" parent="299" name="our_bid">
+      <DataType>double|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+    </column>
+    <column id="545" parent="299" name="winning_bid">
+      <DataType>double|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+    </column>
+    <column id="546" parent="299" name="revenue">
+      <DataType>double|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>11</Position>
+    </column>
+    <column id="547" parent="299" name="winrate_1">
+      <DataType>double|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>12</Position>
+    </column>
+    <column id="548" parent="299" name="winrate_3">
+      <DataType>double|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>13</Position>
+    </column>
+    <column id="549" parent="299" name="winrate_10">
+      <DataType>double|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>14</Position>
+    </column>
+    <column id="550" parent="299" name="arb_id">
+      <DataType>int(11)|0s</DataType>
+      <Position>15</Position>
+    </column>
+    <column id="551" parent="299" name="fb_id">
+      <DataType>int(11)|0s</DataType>
+      <Position>16</Position>
+    </column>
+    <column id="552" parent="299" name="actual_won">
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>-1</DefaultExpression>
+      <Position>17</Position>
+    </column>
+    <column id="553" parent="299" name="chain">
+      <DataType>varchar(45)|0s</DataType>
+      <DefaultExpression>&apos;eth&apos;</DefaultExpression>
+      <Position>18</Position>
+    </column>
+    <index id="554" parent="299" name="pool">
+      <ColNames>pool
+token_in
+token_out</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="555" parent="299" name="timestamp">
+      <ColNames>timestamp</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="556" parent="299" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+    </key>
+    <column id="557" parent="300" name="id">
+      <AutoIncrement>443875</AutoIncrement>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="558" parent="300" name="symbol">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="559" parent="300" name="timestamp">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="560" parent="300" name="exchanges">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="561" parent="300" name="spread">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <index id="562" parent="300" name="symbol">
+      <ColNames>symbol
+id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="563" parent="300" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+    </key>
+    <column id="564" parent="301" name="id">
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="565" parent="301" name="value">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="566" parent="301" name="updated_at">
+      <DataType>double|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <key id="567" parent="301" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+    </key>
+    <column id="568" parent="302" name="id">
+      <AutoIncrement>1080653</AutoIncrement>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="569" parent="302" name="order_id">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="570" parent="302" name="exchange">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="571" parent="302" name="ticker">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="572" parent="302" name="side">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="573" parent="302" name="quantity">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="574" parent="302" name="exec_price">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="575" parent="302" name="init_price">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="576" parent="302" name="receive_price">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="577" parent="302" name="start_time">
+      <DataType>double|0s</DataType>
+      <Position>10</Position>
+    </column>
+    <column id="578" parent="302" name="end_time">
+      <DataType>double|0s</DataType>
+      <Position>11</Position>
+    </column>
+    <column id="579" parent="302" name="receive_time">
+      <DataType>double|0s</DataType>
+      <Position>12</Position>
+    </column>
+    <column id="580" parent="302" name="premium">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>13</Position>
+    </column>
+    <column id="581" parent="302" name="taker_price_full">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>14</Position>
+    </column>
+    <column id="582" parent="302" name="taker_price_remaining">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>15</Position>
+    </column>
+    <column id="583" parent="302" name="hedger_size">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>16</Position>
+    </column>
+    <column id="584" parent="302" name="mm_netted_size">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>17</Position>
+    </column>
+    <column id="585" parent="302" name="hedger_balance">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>18</Position>
+    </column>
+    <column id="586" parent="302" name="mm_balance">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>19</Position>
+    </column>
+    <column id="587" parent="302" name="order_qty">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>20</Position>
+    </column>
+    <column id="588" parent="302" name="total_traded">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>21</Position>
+    </column>
+    <column id="589" parent="302" name="taker_qty">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>22</Position>
+    </column>
+    <column id="590" parent="302" name="maker_qty">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>23</Position>
+    </column>
+    <column id="591" parent="302" name="taker_price">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>24</Position>
+    </column>
+    <column id="592" parent="302" name="maker_price">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>25</Position>
+    </column>
+    <column id="593" parent="302" name="qty_left">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>26</Position>
+    </column>
+    <column id="594" parent="302" name="exec_type">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>27</Position>
+    </column>
+    <column id="595" parent="302" name="hedger_netted_size">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>28</Position>
+    </column>
+    <index id="596" parent="302" name="ticker">
+      <ColNames>ticker
+side</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="597" parent="302" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+    </key>
+    <column id="598" parent="303" name="id">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="599" parent="303" name="address">
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="600" parent="303" name="name">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="601" parent="303" name="type">
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="602" parent="303" name="chain">
+      <DataType>varchar(45)|0s</DataType>
+      <DefaultExpression>&apos;eth&apos;</DefaultExpression>
+      <Position>5</Position>
+    </column>
+    <column id="603" parent="303" name="ignore">
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>6</Position>
+    </column>
+    <column id="604" parent="303" name="is_storage">
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>7</Position>
+    </column>
+    <key id="605" parent="303" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+    </key>
+    <column id="606" parent="304" name="id">
+      <AutoIncrement>16193468</AutoIncrement>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="607" parent="304" name="ticker">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="608" parent="304" name="timestamp">
+      <DataType>double|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="609" parent="304" name="run_id">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="610" parent="304" name="price">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="611" parent="304" name="balance">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="612" parent="304" name="max_balance">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="613" parent="304" name="bot">
+      <DataType>varchar(200)|0s</DataType>
+      <DefaultExpression>&apos;combined&apos;</DefaultExpression>
+      <Position>8</Position>
+    </column>
+    <column id="614" parent="304" name="virt_same_long_qty">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="615" parent="304" name="virt_same_long_price">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>10</Position>
+    </column>
+    <column id="616" parent="304" name="virt_opp_long_qty">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>11</Position>
+    </column>
+    <column id="617" parent="304" name="virt_opp_long_price">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>12</Position>
+    </column>
+    <column id="618" parent="304" name="virt_same_short_qty">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>13</Position>
+    </column>
+    <column id="619" parent="304" name="virt_same_short_price">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>14</Position>
+    </column>
+    <column id="620" parent="304" name="virt_opp_short_qty">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>15</Position>
+    </column>
+    <column id="621" parent="304" name="virt_opp_short_price">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>16</Position>
+    </column>
+    <column id="622" parent="304" name="real_same_long_qty">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>17</Position>
+    </column>
+    <column id="623" parent="304" name="real_same_long_price">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>18</Position>
+    </column>
+    <column id="624" parent="304" name="real_opp_long_qty">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>19</Position>
+    </column>
+    <column id="625" parent="304" name="real_opp_long_price">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>20</Position>
+    </column>
+    <column id="626" parent="304" name="real_same_short_qty">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>21</Position>
+    </column>
+    <column id="627" parent="304" name="real_same_short_price">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>22</Position>
+    </column>
+    <column id="628" parent="304" name="real_opp_short_qty">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>23</Position>
+    </column>
+    <column id="629" parent="304" name="real_opp_short_price">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>24</Position>
+    </column>
+    <column id="630" parent="304" name="rest_long_qty">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>25</Position>
+    </column>
+    <column id="631" parent="304" name="rest_long_price">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>26</Position>
+    </column>
+    <column id="632" parent="304" name="rest_short_qty">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>27</Position>
+    </column>
+    <column id="633" parent="304" name="rest_short_price">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>28</Position>
+    </column>
+    <column id="634" parent="304" name="bot_weight">
+      <DataType>varchar(200)|0s</DataType>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+      <Position>29</Position>
+    </column>
+    <column id="635" parent="304" name="pnl">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>30</Position>
+    </column>
+    <key id="636" parent="304" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+    </key>
+    <column id="637" parent="305" name="id">
+      <AutoIncrement>798893</AutoIncrement>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="638" parent="305" name="timestamp">
+      <DataType>double|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="639" parent="305" name="run_id">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="640" parent="305" name="ticker">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="641" parent="305" name="netting_type">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="642" parent="305" name="flow_type">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="643" parent="305" name="pool">
+      <DataType>int(11)|0s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="644" parent="305" name="price">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="645" parent="305" name="qty">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="646" parent="305" name="mm_pre_balance">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>10</Position>
+    </column>
+    <column id="647" parent="305" name="hedger_pre_balance">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>11</Position>
+    </column>
+    <column id="648" parent="305" name="stat_pre_balance">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>12</Position>
+    </column>
+    <column id="649" parent="305" name="warehouse_pre_balance">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>13</Position>
+    </column>
+    <column id="650" parent="305" name="mm_post_balance">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>14</Position>
+    </column>
+    <column id="651" parent="305" name="hedger_post_balance">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>15</Position>
+    </column>
+    <column id="652" parent="305" name="stat_post_balance">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>16</Position>
+    </column>
+    <column id="653" parent="305" name="warehouse_post_balance">
+      <DataType>varchar(200)|0s</DataType>
+      <Position>17</Position>
+    </column>
+    <key id="654" parent="305" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+    </key>
+    <column id="655" parent="306" name="id">
+      <AutoIncrement>1536854</AutoIncrement>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="656" parent="306" name="timestamp">
+      <DataType>double|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="657" parent="306" name="block_number">
+      <DataType>int(11)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="658" parent="306" name="pool">
+      <DataType>int(11)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="659" parent="306" name="token_in">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="660" parent="306" name="token_out">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="661" parent="306" name="value_in">
+      <DataType>double|0s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="662" parent="306" name="value_out">
+      <DataType>double|0s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="663" parent="306" name="expected_hedge_ratio">
+      <DataType>double|0s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="664" parent="306" name="realised_hedge_ratio">
+      <DataType>double|0s</DataType>
+      <Position>10</Position>
+    </column>
+    <column id="665" parent="306" name="cost_usd">
+      <DataType>double|0s</DataType>
+      <Position>11</Position>
+    </column>
+    <column id="666" parent="306" name="profit_usd">
+      <DataType>double|0s</DataType>
+      <Position>12</Position>
+    </column>
+    <column id="667" parent="306" name="input_value_usd">
+      <DataType>double|0s</DataType>
+      <Position>13</Position>
+    </column>
+    <column id="668" parent="306" name="extraction_type">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>14</Position>
+    </column>
+    <column id="669" parent="306" name="submit_type">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>15</Position>
+    </column>
+    <column id="670" parent="306" name="token_in_old_balance_ratio">
+      <DataType>double|0s</DataType>
+      <Position>16</Position>
+    </column>
+    <column id="671" parent="306" name="token_in_new_balance_ratio">
+      <DataType>double|0s</DataType>
+      <Position>17</Position>
+    </column>
+    <column id="672" parent="306" name="token_out_old_balance_ratio">
+      <DataType>double|0s</DataType>
+      <Position>18</Position>
+    </column>
+    <column id="673" parent="306" name="token_out_new_balance_ratio">
+      <DataType>double|0s</DataType>
+      <Position>19</Position>
+    </column>
+    <column id="674" parent="306" name="hedge_order_id">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>20</Position>
+    </column>
+    <column id="675" parent="306" name="chain">
+      <DataType>varchar(45)|0s</DataType>
+      <DefaultExpression>&apos;eth&apos;</DefaultExpression>
+      <Position>21</Position>
+    </column>
+    <column id="676" parent="306" name="base_cost_usd">
+      <DataType>double|0s</DataType>
+      <Position>22</Position>
+    </column>
+    <column id="677" parent="306" name="type">
+      <DataType>varchar(45)|0s</DataType>
+      <DefaultExpression>&apos;success&apos;</DefaultExpression>
+      <Position>23</Position>
+    </column>
+    <index id="678" parent="306" name="timestamp">
+      <ColNames>timestamp</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="679" parent="306" name="pools">
+      <ColNames>pool
+timestamp</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="680" parent="306" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+    </key>
+    <column id="681" parent="307" name="param">
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="682" parent="307" name="value">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="683" parent="307" name="type">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <key id="684" parent="307" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>param</UnderlyingIndexColNames>
+    </key>
+    <column id="685" parent="308" name="id">
+      <AutoIncrement>1664</AutoIncrement>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="686" parent="308" name="address">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="687" parent="308" name="protocol">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="688" parent="308" name="description">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="689" parent="308" name="active">
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>5</Position>
+    </column>
+    <column id="690" parent="308" name="in_contract">
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>6</Position>
+    </column>
+    <column id="691" parent="308" name="chain">
+      <DataType>varchar(45)|0s</DataType>
+      <DefaultExpression>&apos;eth&apos;</DefaultExpression>
+      <Position>7</Position>
+    </column>
+    <column id="692" parent="308" name="type">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="693" parent="308" name="data">
+      <DataType>json|0s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="694" parent="308" name="flashbots_seperate">
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>1</DefaultExpression>
+      <Position>10</Position>
+    </column>
+    <column id="695" parent="308" name="is_garbage">
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>11</Position>
+    </column>
+    <column id="696" parent="308" name="wanted_active">
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>1</DefaultExpression>
+      <Position>12</Position>
+    </column>
+    <column id="697" parent="308" name="flashbots_enabled">
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>1</DefaultExpression>
+      <Position>13</Position>
+    </column>
+    <column id="698" parent="308" name="pga_rate">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>0.5</DefaultExpression>
+      <Position>14</Position>
+    </column>
+    <column id="699" parent="308" name="protocol_type">
+      <DataType>varchar(15)|0s</DataType>
+      <DefaultExpression>&apos;dex&apos;</DefaultExpression>
+      <Position>15</Position>
+    </column>
+    <index id="700" parent="308" name="id_UNIQUE">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="701" parent="308" name="address_UNIQUE">
+      <ColNames>address</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="702" parent="308" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+    </key>
+    <key id="703" parent="308" name="id_UNIQUE">
+      <UnderlyingIndexName>id_UNIQUE</UnderlyingIndexName>
+    </key>
+    <key id="704" parent="308" name="address_UNIQUE">
+      <UnderlyingIndexName>address_UNIQUE</UnderlyingIndexName>
+    </key>
+    <column id="705" parent="309" name="id">
+      <AutoIncrement>968258</AutoIncrement>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="706" parent="309" name="timestamp">
+      <DataType>double|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="707" parent="309" name="symbol">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="708" parent="309" name="price">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <key id="709" parent="309" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+    </key>
+    <column id="710" parent="310" name="token">
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="711" parent="310" name="tickers">
+      <DataType>json|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <key id="712" parent="310" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>token</UnderlyingIndexColNames>
+    </key>
+    <column id="713" parent="311" name="id">
+      <AutoIncrement>857</AutoIncrement>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="714" parent="311" name="name">
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="715" parent="311" name="decimals">
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="716" parent="311" name="address">
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="717" parent="311" name="weight">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>5</Position>
+    </column>
+    <column id="718" parent="311" name="info">
+      <DataType>json|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="719" parent="311" name="active">
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>7</Position>
+    </column>
+    <column id="720" parent="311" name="chain">
+      <DataType>varchar(45)|0s</DataType>
+      <DefaultExpression>&apos;eth&apos;</DefaultExpression>
+      <Position>8</Position>
+    </column>
+    <column id="721" parent="311" name="wanted_active">
+      <DataType>int(11)|0s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="722" parent="311" name="cex_liquidity">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>10</Position>
+    </column>
+    <column id="723" parent="311" name="pending_rebalance_amount">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>11</Position>
+    </column>
+    <column id="724" parent="311" name="spot_binance_weight">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>12</Position>
+    </column>
+    <column id="725" parent="311" name="slippage">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>6</DefaultExpression>
+      <Position>13</Position>
+    </column>
+    <column id="726" parent="311" name="base_slippage">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>14</Position>
+    </column>
+    <column id="727" parent="311" name="rebal_exchange">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>15</Position>
+    </column>
+    <column id="728" parent="311" name="rebal_baseToken">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>16</Position>
+    </column>
+    <column id="729" parent="311" name="max_balance">
+      <DataType>varchar(45)|0s</DataType>
+      <DefaultExpression>&apos;1000000&apos;</DefaultExpression>
+      <Position>17</Position>
+    </column>
+    <column id="730" parent="311" name="meets_requirements">
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>18</Position>
+    </column>
+    <column id="731" parent="311" name="is_stablecoin">
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>19</Position>
+    </column>
+    <column id="732" parent="311" name="tax">
+      <DataType>varchar(50)|0s</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+      <Position>20</Position>
+    </column>
+    <column id="733" parent="311" name="cex_volume">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>21</Position>
+    </column>
+    <column id="734" parent="311" name="dex_liquidity">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>22</Position>
+    </column>
+    <column id="735" parent="311" name="relative_eth_vol">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>1</DefaultExpression>
+      <Position>23</Position>
+    </column>
+    <column id="736" parent="311" name="last_vol_update">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>24</Position>
+    </column>
+    <column id="737" parent="311" name="eth_corr">
+      <DataType>double|0s</DataType>
+      <DefaultExpression>1</DefaultExpression>
+      <Position>25</Position>
+    </column>
+    <column id="738" parent="311" name="tag">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>26</Position>
+    </column>
+    <key id="739" parent="311" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+    </key>
+    <column id="740" parent="312" name="id">
+      <AutoIncrement>352510</AutoIncrement>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="741" parent="312" name="timestamp">
+      <DataType>double|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="742" parent="312" name="total">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="743" parent="312" name="total_after_holdings">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="744" parent="312" name="trader_binance">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="745" parent="312" name="wallet_eth">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="746" parent="312" name="wallet_avax">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>7</Position>
+    </column>
+    <column id="747" parent="312" name="eth_price">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="748" parent="312" name="avax_price">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>9</Position>
+    </column>
+    <column id="749" parent="312" name="binance_positions">
+      <DataType>json|0s</DataType>
+      <Position>10</Position>
+    </column>
+    <column id="750" parent="312" name="binance_minRequoter">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>11</Position>
+    </column>
+    <column id="751" parent="312" name="pending_deposit">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>12</Position>
+    </column>
+    <column id="752" parent="312" name="pending_withdraw">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>13</Position>
+    </column>
+    <column id="753" parent="312" name="binance_spot_balance">
+      <DataType>varchar(45)|0s</DataType>
+      <Position>14</Position>
+    </column>
+    <key id="754" parent="312" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
+    </key>
+  </database-model>
+</dataSource>
