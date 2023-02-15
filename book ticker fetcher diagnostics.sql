@@ -30,7 +30,13 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA timescaledb_experimental
     GRANT SELECT ON TABLES TO grafana;
 
 
+SELECT pg_size_pretty(pg_database_size('books'));
 
-VACUUM FULL Analyze liquidity_logs;
+
+VACUUM FULL Analyze;
+
+VACUUM full spread_logs;
+
+
 
 

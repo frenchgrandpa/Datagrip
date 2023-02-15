@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="74273bea-ab3b-4c34-9481-adfdc6e6e0ac" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/66162abc-f4e7-4976-aa34-52af85bb5f18.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/66162abc-f4e7-4976-aa34-52af85bb5f18.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/66162abc-f4e7-4976-aa34-52af85bb5f18/storage_v2/_src_/database/books.qiKZBQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/66162abc-f4e7-4976-aa34-52af85bb5f18/storage_v2/_src_/database/books.qiKZBQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/99c340a8-db62-43e8-9f5e-61f4ef418868.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/99c340a8-db62-43e8-9f5e-61f4ef418868.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c4ab1c93-0c9e-4aa8-95c2-797dd9b542d0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c4ab1c93-0c9e-4aa8-95c2-797dd9b542d0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fc1a3de6-80fa-49c8-9c38-1dbc956910de.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fc1a3de6-80fa-49c8-9c38-1dbc956910de.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fc1a3de6-80fa-49c8-9c38-1dbc956910de/storage_v2/_src_/database/reservations.JzbTtw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fc1a3de6-80fa-49c8-9c38-1dbc956910de/storage_v2/_src_/database/reservations.JzbTtw/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fc1a3de6-80fa-49c8-9c38-1dbc956910de/storage_v2/_src_/database/reservations.JzbTtw/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fc1a3de6-80fa-49c8-9c38-1dbc956910de/storage_v2/_src_/database/reservations.JzbTtw/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fc1a3de6-80fa-49c8-9c38-1dbc956910de/storage_v2/_src_/database/reservations.JzbTtw/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fc1a3de6-80fa-49c8-9c38-1dbc956910de/storage_v2/_src_/database/reservations.JzbTtw/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_09_2022_22_24_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_09_2022_22_24__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book ticker fetcher diagnostics.sql" beforeDir="false" afterPath="$PROJECT_DIR$/book ticker fetcher diagnostics.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marketplace.sql" beforeDir="false" afterPath="$PROJECT_DIR$/marketplace.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payments.sql" beforeDir="false" afterPath="$PROJECT_DIR$/payments.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trades.sql" beforeDir="false" afterPath="$PROJECT_DIR$/trades.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,14 +34,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1QeuF2wuMrKajSrRL5Qcy41G3g2" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/pepij&quot;,
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/pepijn/repos/book-ticker-fetcher&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -28,8 +56,22 @@
       &quot;mariadb&quot;,
       &quot;mysql&quot;,
       &quot;postgresql&quot;
+    ],
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
+      &quot;PostgreSQL&quot;
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pepijn\repos\Datagrip" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="s" />
+    <MESSAGE value="Prune sql files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prune sql files" />
+  </component>
 </project>
