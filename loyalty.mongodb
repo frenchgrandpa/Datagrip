@@ -1,0 +1,74 @@
+db.runCommand({
+  collMod: "referals",
+  validator: {
+      $jsonSchema: {
+     "title": "referals",
+     "properties": {
+       "_id": {
+         "bsonType": "objectId"
+       },
+       "referer": {
+         "bsonType": "string"
+       },
+       "referee": {
+         "bsonType": "string"
+       },
+       "timestamp": {
+         "bsonType": "date"
+       }
+   },
+     "required": [
+       "_id",
+       "referer",
+       "referee",
+       "timestamp"
+     ]
+   }
+},
+  validationLevel: "strict",
+  validationAction: "error"
+});
+
+db.runCommand({
+  collMod: "customers",
+  validator: {
+      $jsonSchema: {
+     "title": "customers",
+     "properties": {
+       "_id": {
+         "bsonType": "objectId"
+       },
+       "discoveryMethod": {
+         "bsonType": "string"
+       },
+       "name": {
+         "bsonType": "string"
+       },
+       "birthday": {
+         "bsonType": ["string", "null"]
+       },
+       "phone": {
+         "bsonType": "string"
+       },
+       "cardId": {
+         "bsonType": "string"
+       },
+       "timestamp": {
+         "bsonType": "date"
+       }
+   },
+     "required": [
+       "_id",
+       "discoveryMethod",
+       "name",
+       "birthday",
+       "phone",
+       "cardId",
+       "timestamp"
+     ]
+   }
+},
+  validationLevel: "strict",
+  validationAction: "error"
+});
+

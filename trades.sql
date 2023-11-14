@@ -1,6 +1,6 @@
 select e -> 'assetid' as s from trades,
     jsonb_array_elements(bot_items) e
-where e ->> 'assetid' = '26563777681'
+where e ->> 'assetid' = '23671143869'
 order by id desc
 
 select id, user_id from bots where user_id is not null\
@@ -8,7 +8,7 @@ select count(*) from trades where created_at > now () - interval '1 month'
 
 select e -> 'assetid' as s from trades,
 jsonb_array_elements(bot_items) e
-where user_id = 31211
+where user_id = 32177
 order by id desc
 
 select created_at, * from trades
@@ -22,12 +22,13 @@ select * from trades where user_id= 31211 order by created_at desc
 
 select * from trades,
     jsonb_array_elements(bot_items) e
-where e ->> 'assetid' = '26563777681'
+where e ->> 'assetid' = '29848459584'
 order by id desc
 
 select * from trades
 
 select * from trades where user_id =13234 and bot_id = 153 order by id desc
+select * from trades where user_id =32193
 select * from trades where state = 6
 
 select * from trades, jsonb_array_elements(bot_items) e
@@ -68,3 +69,18 @@ FROM pg_catalog.pg_user
 ORDER BY role_name desc;
 
 SELECT * from information_schema.table_privileges WHERE grantee = 'lukas';
+
+select * from trades,
+                                jsonb_array_elements(bot_items) e
+where e ->> 'assetid' = '30139197975'
+order by id desc
+
+
+select steam_id from bots where csgo_item_count > 900
+
+
+select * from trades where user_id = 33277
+order by id desc
+
+
+    3438

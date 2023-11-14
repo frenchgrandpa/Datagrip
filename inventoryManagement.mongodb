@@ -1,0 +1,417 @@
+
+//How to merge
+//https://mongoplayground.net/p/hdg_2EhZ7vI
+
+
+db.recipes.aggregate([
+  {
+    "$lookup": {
+      "from": "ingredients",
+      "localField": "ingredients.ingredient",
+      "foreignField": "_id",
+      "as": "ingredientsDocs"
+    }
+  },
+  {
+    "$set": {
+      "ingredients": {
+        "$map": {
+          "input": "$ingredients",
+          "as": "ingredient",
+          "in": {
+            "$mergeObjects": [
+              {
+              ingredient: {
+                "$first": {
+                  "$filter": {
+                    "input": "$ingredientsDocs",
+                    "as": "doc",
+                    "cond": {
+                      "$eq": [
+                        "$$doc._id",
+                        "$$ingredient.ingredient"
+                      ]
+                    }
+                  }
+                }
+                }
+              },
+              {
+                "amount": "$$ingredient",
+//                "credits": ".credits"
+              }
+            ]
+          }
+        }
+      },
+      "ingredientsDocs": "$$REMOVE"
+    }
+  }
+])
+
+
+db.recipes.find({}, {ingredients:{amount:1}})
+db.recipes.aggregate({$unwind:'$ingredients'}, {$project: {ingredients:{amount:1}}})
+db.ingredients.find()
+
+
+db.ingredients.insertMany([
+//{name: "kaas"},
+{
+  name: "Chipotle",
+  quantity: 1.1,
+  denomination: "g",
+  price: 14.4,
+  source: "https://www.tjinstoko.eu/nl/la-costena-chipotle-in-adobo-28kg.html",
+//  sourceFactor: 1000,
+  supplier: "kaas",
+  alternatives: [
+    {source: "url", quantity: 1.2, price: 1}
+  ],
+  remarks: ["kaas"]
+},
+{
+  name: "Garlic",
+  quantity: 1000,
+  denomination: "g",
+  price: 5.49,
+  source: "https://www.versbestellen.nl/nl_NL/p/knoflook-gepeld-schoon-1kg/34654/",
+//  sourceFactor: 1000,
+  supplier: "makro"
+},
+//{
+//  name: "Garlic",
+//  quantity: 250.1,
+//  denomination: "u",
+////  price: 5.49,
+//  source: "kekker",
+////  sourceFactor: 1000,
+//  supplier: ObjectId('64bbee429b00ca43284895a3')
+//},
+])
+
+db.getCollectionInfos()
+
+
+db.runCommand({
+  collMod: "ingredients",
+  validator: {
+    $jsonSchema: {
+                   "title": "ingredient",
+                   "properties": {
+                     "_id": {
+                       "bsonType": "objectId"
+                     },
+                     "alternatives": {
+                       "bsonType": "array",
+                       "items": {
+                         "bsonType": "object",
+                         "properties": {
+                           "quantity": {
+                             "bsonType": "number"
+                           },
+                           "price": {
+                             "bsonType": "number"
+                           },
+                           "source": {
+                             "bsonType": "string"
+                           },
+                           "remarks": {
+                             "bsonType": ["string", "undefined"]
+                           }
+                         },
+                         "required": [
+                           "quantity",
+                           "price",
+                           "source"
+                         ]
+                       }
+                     },
+                     "denomination": {
+                       "bsonType": ["string", "null"]
+                     },
+                     "name": {
+                       "bsonType": "string"
+                     },
+                     "price": {
+                       "bsonType": ["number", "null"]
+                     },
+                     "quantity": {
+                       "bsonType": ["number", "null"]
+                     },
+                     "size": {
+                       "bsonType": ["number", "null"]
+                     },
+                     "source": {
+                       "bsonType": ["objectId", "string"]
+                     },
+                     "sourceType": {
+                       "bsonType": "string"
+                     },
+                     "supplier": {
+                       "bsonType": ["string", "null"]
+                     },
+                     "remarks": {
+                       "bsonType": ["string", "undefined"],
+                     }
+                   },
+                   "required": [
+                     "_id",
+                     "name",
+                     "denomination",
+                     "price",
+                     "quantity",
+                     "size",
+                     "source",
+                     "sourceType",
+                     "supplier"
+                   ]
+                 }
+  },
+  validationLevel: "strict",
+  validationAction: "error"
+});
+
+db.runCommand({
+  collMod: "suppliers",
+  validator: {
+    $jsonSchema: {
+                   "title": "supplier",
+                   "properties": {
+                     "deliveryCost": {
+                       "bsonType": "number"
+                     },
+                     "freeDeliveryFrom": {
+                       "bsonType": ["number", "null"]
+                     },
+                     "minOrderAmount": {
+                       "bsonType": "number"
+                     },
+                     "name": {
+                       "bsonType": "string"
+                     },
+                     "remarks": {
+                       "bsonType": "string"
+                     }
+                   },
+                   "required": [
+                     "deliveryCost",
+                     "freeDeliveryFrom",
+                     "minOrderAmount",
+                     "name"
+                   ]
+                 }
+  },
+  validationLevel: "strict",
+  validationAction: "error"
+});
+
+
+db.runCommand({
+  collMod: "recipes",
+  validator: {
+    $jsonSchema: {
+                   "title": "recipe",
+                   "properties": {
+                     "_id": {
+                       "bsonType": "objectId"
+                     },
+                     "denomination": {
+                       "bsonType": "string"
+                     },
+                     "ingredients": {
+                       "bsonType": "array",
+                       "items": {
+                         "bsonType": "object",
+                         "properties": {
+                           "amount": {
+                             "bsonType": "number"
+                           },
+                           "id": {
+                             "bsonType": "objectId"
+                           },
+                           "remarks": {
+                             "bsonType": ["string", "undefined"]
+                           }
+                         },
+                         "required": [
+                           "amount",
+                           "id"
+                         ]
+                       }
+                     },
+                     "name": {
+                       "bsonType": "string"
+                     },
+                     "instructions": {
+                       "bsonType": "string"
+                     },
+                     "remarks": {
+                       "bsonType": "string"
+                     },
+                     "tests": {
+                       "bsonType": "array",
+                       "items": {
+                         "bsonType": "string"
+                       }
+                     },
+                     "type": {
+                       "bsonType": "string"
+                     },
+                     "yield": {
+                       "bsonType": "number"
+                     },
+                     "menuPrice": {
+                        "bsonType": ["number", "null"]
+                     },
+                     "servingSize": {
+                        "bsonType": ["number", "null"]
+                     },
+                     "category": {
+                        "bsonType": ["string", "undefined"]
+                     },
+                      "extras": {
+                        "bsonType": "array",
+                        "items": {
+                          "bsonType": "object",
+                          "properties": {
+                            "ingredientId": {
+                              "bsonType": "objectId"
+                            },
+                            "amount": {
+                              "bsonType": "number"
+                            },
+                            "menuPrice": {
+                              "bsonType": "number"
+                            }
+                          },
+                          "required": [
+                            "ingredientId",
+                            "amount",
+                            "menuPrice"
+                          ]
+                        }
+                      }
+                   },
+                   "required": [
+                     "_id",
+                     "denomination",
+                     "ingredients",
+                     "instructions",
+                     "name",
+                     "tests",
+                     "type",
+                     "yield",
+                     "menuPrice",
+                     "servingSize",
+                     "extras"
+                   ]
+                 }
+             },
+  validationLevel: "strict",
+  validationAction: "error"
+});
+
+db.runCommand({
+  collMod: "zettleIdMap",
+  validator: {
+               $jsonSchema: {
+                "title": "zettleIdMap",
+                 "bsonType": "object",
+                 "properties": {
+                     "_id": {
+                       "bsonType": "objectId"
+                     }
+                 },
+                 "additionalProperties": {
+                   "bsonType": "object",
+                   "properties": {
+                     "variantId": { "bsonType": "string" },
+                     "productId": { "bsonType": "string" }
+                   },
+                   "required": ["variantId", "productId"]
+                 }
+               }
+             },
+  validationLevel: "strict",
+  validationAction: "error"
+});
+
+
+db.runCommand({
+  collMod: "extraSets",
+  validator: {
+      $jsonSchema: {
+     "title": "extraSet",
+     "properties": {
+       "_id": {
+         "bsonType": "objectId"
+       },
+         "name": {
+                "bsonType": "string"
+              },
+        "extras": {
+          "bsonType": "array",
+          "items": {
+            "bsonType": "object",
+            "properties": {
+              "ingredientId": {
+                "bsonType": "objectId"
+              },
+              "amount": {
+                "bsonType": "number"
+              },
+              "menuPrice": {
+                "bsonType": "number"
+              }
+            },
+            "required": [
+              "ingredientId",
+              "amount",
+              "menuPrice"
+            ]
+          }
+        }
+     },
+     "required": [
+     "_id",
+       "name",
+       "extras"
+     ]
+   }
+},
+  validationLevel: "strict",
+  validationAction: "error"
+});
+
+db.runCommand({
+  collMod: "inventory",
+  validator: {
+      $jsonSchema: {
+     "title": "inventory",
+     "properties": {
+       "_id": {
+         "bsonType": "objectId"
+       },
+       "ingredientId": {
+         "bsonType": "objectId"
+       },
+       "amount": {
+         "bsonType": "number"
+       },
+       "par": {
+         "bsonType": "number"
+       }
+   },
+     "required": [
+       "_id",
+       "ingredientId",
+       "amount",
+       "par"
+     ]
+   }
+},
+  validationLevel: "strict",
+  validationAction: "error"
+});
+

@@ -1,5 +1,7 @@
-select * from users where id = 15644
-select * from users where trade_url like 'https://steamcommunity.com/tradeoffer/new/?partner=399670282&token=K38xhkwa'
+select * from users where id = 2270
+select * from users where trade_url like 'https://steamcommunity.com/tradeoffer/new/?partner=200509178&token=qSPPStlb'
+
+select * from items where app_id = 730 and bot_id > 21 and unlocking_time > now() - interval '7 days'
 
 select users.* from users
                         inner join security_info si on users.security_info_id = si.id
@@ -16,7 +18,7 @@ where u.id = 25308
 
 select s.* from security_info s
 inner join users u on s.id = u.security_info_id
-where u.id = 23216
+where u.id = 31578
 
 
 select * from tracking_codes where owner_id = 108
@@ -26,9 +28,9 @@ select name, item_transactions.* from item_transactions
 inner join item_specs i on item_transactions.item_spec_id = i.id
 where buyer_id=26716 or seller_id = -1
 order by id desc
-select * from item_specs where id = 1987
+select * from item_specs where id = 29712
 
-select * from balance_transactions where user_id = 28378 and reason > -1 order by id desc
+select * from balance_transactions where user_id = 32624 and reason > -1 order by id desc
 select * from users where steam_id = '76561198800686225'
 select * from users where id = 28772
 select * from users where merged_to = 10629
@@ -36,31 +38,36 @@ select * from users where merged_to = 10629
 select * from users order by balance desc
 select * from item_transactions where asset_id in (
 
-
+    '5224777830878404278'
     )
 
 
 
 select * from item_transactions where buy_listing_id = 913853
 
+select * from security_info where unlimited_payouts = true
 
-select * from item_transactions where seller_id = 31227 or buyer_id = 31227 order by id desc
-select * from item_transactions where asset_id = '26563777681' order by id desc
+
+select * from item_transactions where seller_id = 31227 or buyer_id = 32221 order by id desc
+select * from item_transactions where asset_id = '5776470036536327161' order by id desc
 SELECT * from sell_listings where owner_id = 11699
 SELECT * from sell_listings where item_id = 3798908
 select * from buy_listings where owner_id = 24072
-select * from security_info where id = 2948
+select * from security_info where id = 33277
 select * from item_specs where id = 3173
 select * from balance_transactions where user_id =17692
+select * from sell_listings where id = 25200403
+select * from items where id= 24897843
+select * from items where owner_id= 32221 and in_use = false
+select * from item_specs where id= 15242
 
 
-select * from items where id= 22823141
-select * from sell_listings where item_id= 22823141
-select name, items.* from items inner join item_specs i on i.id = items.item_spec_id  where owner_id= 28378 -- and in_use = false and (unlocking_time < now() or unlocking_time is null)
+select * from sell_listings where item_id= 24897843
+select name, items.* from items inner join item_specs i on i.id = items.item_spec_id  where owner_id= 31984 and (unlocking_time < now() or unlocking_time is null)
 select i.name, items.* from items
 inner join item_specs i on i.id = items.item_spec_id
 where owner_id = 12177 and (unlocking_time is null or unlocking_time < now()) and in_use = false
-select * from items where asset_id = '4201329643470362937'
+select * from items where asset_id = '27161116811'
 select * from items where owner_id = 27227
 select * from items where id in (17797511,17797540,17797539,17797538,17797537,17797536,17797535,17797534,17797533,17797532,17797531,17797530,17797529,17797528,17797527,17797526,17797525,17797524,17797523,17797522,17797521,17797520,17797519,17797518,17797517,17797516,17797515,17797514,17797513,17797512,17797541,17797542)
 1259
@@ -84,11 +91,11 @@ select * from items where item_spec_id =12837
 select * from items where asset_id ='231231231'
 select * from users where id = 11295
 
-select referer, * from users u
+select si.id, si.unlimited_payouts from users u
                      inner join security_info si on u.security_info_id = si.id
                      left join user_info ui on u.user_info_id = ui.id
 inner join tracking_info ti on u.tracking_info_id = ti.id
-where u.id = 21938
+where u.id = 13581
 
 
 select * from items where owner_id = 20379
@@ -660,4 +667,55 @@ select email, first_name || ' '|| user_info.last_name from user_info
 30810,
 31229
     )
+
+
+select app_id, count(*) from sell_listings
+                        inner join items i on i.id = sell_listings.item_id
+                        inner join users u on i.owner_id = u.id
+                        where status = 0
+--                         and i.bot_steam_id != u.steam_id
+                        group by app_id
+
+
+select * from sell_listings where item_id is null and status = 0
+select * from item_specs where app_id = 252490
+
+
+
+select * from users where id in (
+
+    33500,
+        33505,
+33506,
+33507,
+33508,
+33510,
+33512,
+33513,
+33515,
+33517
+
+    )
+    select * from items where owner_id in (32725,32724,32697 )
+
+select * from balance_transactions where user_id = 32814
+
+select * from item_transactions where asset_id in (select asset_id
+                                                   from items
+                                                            inner join users u on items.owner_id = u.id
+                                                   where bot_id = 28-- and steam_id = bot_steam_id
+                                                     and app_id = 730)
+
+select name, last_edit_time, items.* from items
+                     inner join item_specs i on i.id = items.item_spec_id
+                     inner join sell_listings sl on items.id = sl.item_id
+                     where items.owner_id = 108 and in_use = true and items.app_id = 730
+order by sl.last_edit_time desc
+
+select * from sell_listings where  owner_id =33277 and status = 1
+
+
+select sum(buy_price) from items
+        inner join sell_listings sl on items.id = sl.item_id
+        where items.owner_id = 12307 and in_use = false
 

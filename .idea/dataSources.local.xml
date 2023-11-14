@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="dataSourceStorageLocal" created-in="DB-223.8214.62">
+  <component name="dataSourceStorageLocal" created-in="DB-231.9011.35">
     <data-source name="postgres@52.214.158.241" uuid="853a3b75-d82c-4950-9806-c004fb4f9892">
       <database-info product="PostgreSQL" version="11.6" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.5" dbms="POSTGRES" exact-version="11.6" exact-driver-version="42.2">
         <identifier-quote-string>&quot;</identifier-quote-string>
@@ -41,7 +41,7 @@
       </schema-mapping>
     </data-source>
     <data-source name="Hetzner Vmarket" uuid="99c340a8-db62-43e8-9f5e-61f4ef418868">
-      <database-info product="PostgreSQL" version="10.22 (Ubuntu 10.22-0ubuntu0.18.04.1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.4.0" dbms="POSTGRES" exact-version="10.22" exact-driver-version="42.4">
+      <database-info product="PostgreSQL" version="10.23 (Ubuntu 10.23-0ubuntu0.18.04.2)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.6.0" dbms="POSTGRES" exact-version="10.23" exact-driver-version="42.6">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
@@ -80,6 +80,20 @@
         <introspection-scope>
           <node kind="database" qname="books">
             <node kind="schema" qname="public" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="jitomato mongodb" uuid="e6213a47-c62e-4e3c-932d-b2c2c075038e">
+      <database-info product="Mongo DB" version="7.1.0" jdbc-version="4.2" driver-name="MongoDB JDBC Driver" driver-version="1.18" dbms="MONGO" exact-version="7.1.0" exact-driver-version="1.18" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>inventoryManagementUser</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema">
+            <name qname="inventoryManagement" />
+            <name qname="loyalty" />
           </node>
         </introspection-scope>
       </schema-mapping>
